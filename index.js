@@ -150,7 +150,8 @@ class Instructor extends Lambdasian {
     return `${student.name} receives a perfect score on ${subject}`
   }
   changeGrade(student){
-    student.grade = Math.round(student.grade - (Math.random() < .5 ? Math.random() * 25 : - Math.random() * 25)).toString()
+    student.grade = Math.round(student.grade - (Math.random() < .5 ? Math.random() * 25 : - Math.random() * 25)).toString();
+    student.grade = student.grade > 100 ? 100 : student.grade
 }
 }
   /*
@@ -179,7 +180,7 @@ class Student extends Lambdasian {
   listSubjects(){
     return this.favSubjects.toString()
   }
-  PRAssignment(subject){
+  PRAssignment(subject){  
     return `${this.name} has submitted a PR for ${subject}`
   }
   sprintChallenge(subject){
