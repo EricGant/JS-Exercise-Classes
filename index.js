@@ -150,8 +150,8 @@ class Instructor extends Lambdasian {
     return `${student.name} receives a perfect score on ${subject}`
   }
   changeGrade(student){
-    student.grade = (student.grade - (Math.random() < .5 ? Math.random() * 25 : -(Math.random() * 25))).toFixed(0)
-  }
+    student.grade = student.grade - (Math.random() < .5 ? Math.random() * 25 : - Math.random() * 25)
+}
 }
   /*
     TASK 5
@@ -175,6 +175,7 @@ class Student extends Lambdasian {
     this.className = attrs.className;
     this.favSubjects = attrs.favSubjects;
     this.grade = attrs.grade;
+    this.graduationStatus = attrs.graduationStatus;
   }
   listSubjects(){
     return this.favSubjects.toString()
@@ -186,7 +187,7 @@ class Student extends Lambdasian {
     return `${this.name} has begun sprint challenge on ${subject}`
   }
   graduate(){
-    parseInt(this.grade) > 70 ? console.log(`You can graduate!`) : console.log(`You need a better grade before you can graduate!`)
+    this.graduationStatus = (this.grade) > 70 ? (`You can graduate!`) : (`You need a better grade before you can graduate!`)
   }
      
 }
@@ -249,8 +250,8 @@ console.log('stretch', grader)
 
 
 grader.changeGrade(eric)
-console.log('stretch next', eric)
 eric.graduate()
+console.log('stretch last', eric)
 
 
   //End of Challenge
