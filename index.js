@@ -226,18 +226,18 @@ class ProjectManager extends Instructor{
         + This method, when called, will check the grade of the student and see if they're ready to graduate from Lambda School
         + If the student's grade is above a 70% let them graduate! Otherwise go back to grading their assignments to increase their score.
   */
-let grader = new ProjectManager({
-  name: 'random',
+let grader = new Instructor({
+  name: 'Brit',
   age: 80,
   location: 'A place',
   specialty: 'Grading',
   favLanguage: 'A++',
   catchPhrase: 'No',
   gradClassName: 'Web1',
-  favInstructor: 'random'
+  favInstructor: 'Someone'
 })
 let eric = new Student({    
-  name: 'eric',
+  name: 'Eric',
   age: 25,
   location: 'North Carolina',
   previousBackground: 'None',
@@ -251,7 +251,7 @@ console.log('stretch', grader)
 
 grader.changeGrade(eric)
 eric.graduate()
-console.log('stretch last', eric)
+console.log('stretch', eric)
 
 
   //End of Challenge
