@@ -120,7 +120,7 @@ class Lambdasian {
   speak(){
     return `Hello my name is ${this.name}, I am from ${this.location}`
   }
-}
+} 
   
   /*
     TASK 4
@@ -150,7 +150,7 @@ class Instructor extends Lambdasian {
     return `${student.name} receives a perfect score on ${subject}`
   }
   changeGrade(student){
-    student.grade = student.grade - (Math.random() < .5 ? Math.random() * 25 : - Math.random() * 25)
+    student.grade = Math.round(student.grade - (Math.random() < .5 ? Math.random() * 25 : - Math.random() * 25)).toString()
 }
 }
   /*
@@ -242,7 +242,7 @@ let eric = new Student({
   previousBackground: 'None',
   className: 'Web45',
   favSubjects: 'Javascript',
-  grade: 85
+  grade: 75
 })
 
 console.log('stretch', grader)
