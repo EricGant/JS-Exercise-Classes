@@ -186,7 +186,7 @@ class Student extends Lambdasian {
     return `${this.name} has begun sprint challenge on ${subject}`
   }
   graduate(){
-    this.graduationStatus = (this.grade) > 70 ? (`You can graduate!`) : (`You need a better grade before you can graduate!`)
+    this.graduationStatus = (this.grade) > 70 ? `You can graduate!` : `You need a better grade before you can graduate!`
   }
      
 }
