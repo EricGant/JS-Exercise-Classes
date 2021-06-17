@@ -175,7 +175,6 @@ class Student extends Lambdasian {
     this.className = attrs.className;
     this.favSubjects = attrs.favSubjects;
     this.grade = attrs.grade;
-    this.graduationStatus = attrs.graduationStatus;
   }
   listSubjects(){
     return this.favSubjects.toString()
